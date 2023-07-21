@@ -7,16 +7,17 @@ const developer: string[] = ['d', 'e', 'v','e', 'l', 'o', 'p', 'e', 'r']
 </script>
 
 <template>
-  <div class="flex items-center justify-center w-full h-full text-6xl font-exoplane ">
-    <div class="flex gap-4 text-5xl text-left text-white text-opacity-0 transition-all duration-200 border-dotted vertical-text">
-      <p class="font-white-outline">Web</p> 
-      <p class="font-white-outline">Developer</p>
-      <p class="text-green-400">.</p>
+  <div class="flex flex-col justify-center w-full h-full text-5xl font-wolves ">
+    <div class="flex gap-4 text-left text-black font-size-name">
+      <p class=""><span class="">K</span>EVIN</p> 
+      <p class="">KIM</p>
     </div>
-    
-    <div class="flex gap-4 text-left text-white text-7xl vertical-text">
-      <p>kevin</p> 
-      <p class="">kim</p>
+    <div class="flex gap-4 text-left text-orange-500 transition-all duration-200 border-dotted font-size-developer">
+      <p class="">WEB</p> 
+      <p class="">
+        <span class="">DEVELOPER</span>
+        <span class="text-black outline-none">.</span>
+      </p>
     </div>
     
   </div>
@@ -26,8 +27,12 @@ const developer: string[] = ['d', 'e', 'v','e', 'l', 'o', 'p', 'e', 'r']
 .bg-intro{
   background: linear-gradient(rgba(20, 26, 33, 0.8), rgba(20, 26, 33, 0.8)), url(./assets/bg-images/subtle_carbon.webp);
 }
-.font-exoplane{
-  font-family: Exoplane, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+.font-size-name{
+  font-size: clamp(4rem, 6vw, 6rem);
+}
+.font-size-developer{
+  font-size: clamp(2.5rem, 3vw, 6rem);
 }
 .vertical-text {
   writing-mode: vertical-lr;

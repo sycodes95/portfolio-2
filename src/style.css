@@ -7,6 +7,21 @@
   src: url(./assets/fonts/Exoplane.ttf);
 }
 
+@font-face {
+  font-family: Ocera;
+  src: url(./assets/fonts/OCERA.ttf);
+}
+
+@font-face {
+  font-family: Rockedex;
+  src: url(./assets/fonts/Rockedex.ttf);
+}
+
+@font-face {
+  font-family: Wolves;
+  src: url(./assets/fonts/PureHeart-Regular.ttf);
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
@@ -28,5 +43,21 @@ body {
 .font-white-outline{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.font-exoplane{
+  font-family: Exoplane, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-ocera{
+  font-family: Ocera, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-rockedex{
+  font-family: Rockedex, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-wolves{
+  font-family: Wolves, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
