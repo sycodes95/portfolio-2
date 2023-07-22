@@ -1,15 +1,15 @@
 <script lang="ts">
 import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiHammerScrewdriver } from '@mdi/js';
+import { mdiDna } from '@mdi/js';
 
 export default {
-  name: "Hammer",
+  name: "Dna",
   components: {
     SvgIcon
   },
   data() {
     return {
-       path: mdiHammerScrewdriver,
+       path: mdiDna,
     }
   }
 }

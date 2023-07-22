@@ -7,12 +7,12 @@ const developer: string[] = ['d', 'e', 'v','e', 'l', 'o', 'p', 'e', 'r']
 </script>
 
 <template>
-  <div class="flex flex-col justify-center w-full h-full text-5xl font-wolves ">
-    <div class="flex gap-4 text-left text-black font-size-name">
+  <div class="flex flex-col justify-center w-full h-full p-2 font-exoplane">
+    <div class="flex items-center gap-4 text-left text-black text-opacity-0 font-black-outline font-size-name line-height-1">
       <p class=""><span class="">K</span>EVIN</p> 
       <p class="">KIM</p>
     </div>
-    <div class="flex gap-4 text-left text-orange-500 transition-all duration-200 border-dotted font-size-developer">
+    <div class="flex gap-4 text-left text-black text-opacity-0 transition-all duration-200 border-dotted font-black-outline font-size-developer">
       <p class="">WEB</p> 
       <p class="">
         <span class="">DEVELOPER</span>
@@ -29,10 +29,13 @@ const developer: string[] = ['d', 'e', 'v','e', 'l', 'o', 'p', 'e', 'r']
 }
 
 .font-size-name{
-  font-size: clamp(4rem, 6vw, 6rem);
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.8;
 }
+
 .font-size-developer{
-  font-size: clamp(2.5rem, 3vw, 6rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.2;
 }
 .vertical-text {
   writing-mode: vertical-lr;
