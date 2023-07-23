@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import About from './components/About.vue';
-import Header from './components/Header.vue'
-import Introduction from './components/Introduction.vue'
-import Projects from './components/Projects.vue';
+import About from './about/about.vue';
+import Header from './header/header.vue'
+import Introduction from './introduction/introduction.vue'
+import Projects from './projects/projects.vue';
 import blackWaves from './assets/bg-images/black-and-white-waves.png'
 </script>
 
@@ -10,13 +10,17 @@ import blackWaves from './assets/bg-images/black-and-white-waves.png'
   <div class="relative flex flex-col items-center min-h-screen overflow-x-hidden bg-black bg-main">
     <div id="content" class="flex w-full h-full max-w-5xl gap-4 pt-12 pl-4 pr-4 max-w-1024-flex-col">
 
-      <section id="section-two" class="flex flex-col w-full h-full max-w-5xl gap-4">
-        <Introduction/>
-        <About/>
+      <section id="section-two" class="relative flex flex-col w-full h-full max-w-5xl gap-4">
+        <div class="lg:absolute">
+          <Introduction/>
+          <About/>
+        </div>
+        
       </section>
 
       <section id="section-one" class="flex flex-col w-full h-full max-w-5xl gap-4 pt-8">
         <Projects/>
+        
       </section>
 
     </div>
