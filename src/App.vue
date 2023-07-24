@@ -8,7 +8,7 @@ import blackWaves from './assets/bg-images/black-and-white-waves.png'
 
 <template>
   <div class="relative flex flex-col items-center min-h-screen overflow-x-hidden bg-black bg-main">
-    <div id="content" class="flex w-full h-full max-w-5xl gap-4 pt-12 pl-4 pr-4 max-w-1024-flex-col">
+    <div id="content" class="flex w-full h-full max-w-lg gap-4 pt-12 pl-4 pr-4 md:max-w-4xl max-w-768-flex-col">
 
       <section id="section-two" class="relative flex flex-col w-full h-full max-w-5xl gap-4">
         <div class="lg:absolute">
