@@ -69,7 +69,9 @@ body {
 }
 
 @media (max-width: 768px){
- 
+  .max-w-768-hidden{
+    display: none;
+  }
   .max-w-768-flex-col{
     flex-direction: column;
   }

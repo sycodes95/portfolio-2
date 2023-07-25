@@ -53,7 +53,7 @@ const initScene = () => {
   // Create the OrbitControls
   controls = new OrbitControls(camera, renderer.domElement);
   controls.enablePan = false; // Disable panning
-  controls.enableZoom = true; // Enable zooming
+  controls.enableZoom = false; // Enable zooming
 };
 
 const updateRendererSize = () => {
@@ -97,7 +97,8 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="w-64 h-80 md:w-80" ref="canvasContainer"></div>
+  <div class="relative max-w-56 h-80 md:w-80" ref="canvasContainer">
+  </div>
 </template>
 
 <style>

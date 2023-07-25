@@ -13,7 +13,7 @@
   <div class="flex flex-col justify-center w-full gap-2 ">
     <AboutHeader/>
     <div class="flex flex-col items-center justify-center w-full gap-4 rounded-sm">
-      <Description class="w-full p-4"/>
+      <Description class="w-full p-2"/>
       <AboutCard/>
     </div>
   </div>
