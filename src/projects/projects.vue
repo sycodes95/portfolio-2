@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Hammer from '../components/icons/Hammer.vue'
 import RLMechanicImage1 from '../assets/project-images/rlmechanics.png'
+import OpenInNew from '../components/icons/OpenInNew.vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 type Project = {
   name: string;
@@ -24,6 +26,20 @@ const projects: Project[] = [
   },
   
 ]
+
+const isMdOrAbove = ref(window.innerWidth >= 768);
+
+const handleResize = () => {
+  isMdOrAbove.value = window.innerWidth >= 768;
+};
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
+});
 </script>
 
 <template>
@@ -36,28 +52,31 @@ const projects: Project[] = [
     </div>
 
     <div id="projects-content" class="flex flex-col gap-4 text-xs text-black border-black rounded-sm border-opacity-10 bg-opacity-5 font-rockedex h-96">
-      <div class="relative flex w-full gap-4 p-2 transition-colors duration-300 bg-black bg-opacity-0 rounded-sm shadow-sm border-opacity-10 hover:cursor-pointer border-l-black border-r-black hover:border-opacity-50 hover:bg-opacity-5 max-w-768-flex-col" 
-      v-for="(project, index) in projects" :key="index" @click="handleProjectClick(project.projectURL)">
+      <div class="relative flex w-full gap-4 p-2 transition-colors duration-300 bg-black bg-opacity-0 rounded-sm shadow-sm group md:hover:cursor-pointer md:hover:border-opacity-50 md:hover:bg-opacity-5 max-w-768-flex-col" 
+      v-for="(project, index) in projects" :key="index" @click="isMdOrAbove && handleProjectClick(project.projectURL)">
 
         <div class="w-full max-w-768-hidden">
           <img class="border-4 border-black rounded-sm w-44 border-opacity-10 grayscale max-w-768-hidden" :src="project.images[0]" alt="project-image-1">
         </div>
 
-        <div class="flex flex-col gap-1">
+        <div class="flex flex-col gap-2">
           <p class="flex flex-wrap rounded-sm ">{{ project.startDate }}</p>
-          <p class="text-lg font-bold">{{ project.name }}</p>
+
+          <p class="flex items-center gap-2 text-lg font-bold transition-colors duration-300 hover:cursor-pointer md:group-hover:text-white hover:text-white"
+          @click="!isMdOrAbove && handleProjectClick(project.projectURL)">{{ project.name }}<OpenInNew class="w-4 h-4"/>
+          </p>
+
           <div class="flex w-full md:hidden">
             <img class="w-56 border-4 border-black rounded-sm border-opacity-10 grayscale" :src="project.images[0]" alt="project-image-1">
           </div>
+          
           <p class="flex flex-wrap rounded-sm ">{{ project.description }}</p>
+
           <div class="flex flex-wrap gap-2" >
             <p class="p-1 text-xs text-black border border-black border-opacity-75 rounded-sm bg-opacity-80" v-for="(tool, index) in project.tools" :key="index">{{ tool }}</p>
             
           </div>
         </div>
-
-        
-        
 
       </div>
       

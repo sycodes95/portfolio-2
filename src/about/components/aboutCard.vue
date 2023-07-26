@@ -1,9 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import silhoutte from '../../assets/images/silhouette.png'
 import { toolsElements } from "../constants";
 import Three from '../components/three.vue'
 import koreanFlag from '../../assets/images/south-korea.png'
 import americanFlag from '../../assets/images/united-states-of-america.png'
+import OpenInNew from '../../components/icons/OpenInNew.vue'
 </script>
 
 <template>

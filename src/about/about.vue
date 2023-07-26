@@ -6,7 +6,7 @@
   import Description from './components/description.vue'
   import AboutHeader from './components/aboutHeader.vue'
   import AboutCard from './components/aboutCard.vue'
-  
+  import ThreeAudioVisual from './components/threeAudioVisual.vue';
 </script>
 
 <template>
