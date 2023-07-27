@@ -15,6 +15,7 @@
     <div class="flex flex-col items-center justify-center w-full gap-4 rounded-sm">
       <Description class="w-full p-2"/>
       <AboutCard/>
+      <div>NMY HOBBUIES</div>
     </div>
   </div>
 </template>

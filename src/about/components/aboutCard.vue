@@ -5,11 +5,21 @@ import Three from '../components/three.vue'
 import koreanFlag from '../../assets/images/south-korea.png'
 import americanFlag from '../../assets/images/united-states-of-america.png'
 import OpenInNew from '../../components/icons/OpenInNew.vue'
+import ThreeAudioVisual from './threeAudioVisual.vue';
 </script>
 
 <template>
   <div class="relative flex justify-between w-full border-black border-opacity-75">
     <div class="flex flex-col gap-4 md:relative">
+      <div class="flex w-full gap-2">
+        <button class="p-1 text-xs transition-colors duration-300 bg-black border border-black border-opacity-0 rounded-sm bg-opacity-80 hover:bg-opacity-0 hover:text-black hover:border hover:border-black hover:border-opacity-10">
+          Github
+        </button>
+
+        <button class="p-1 text-xs transition-colors duration-300 bg-black border border-black border-opacity-0 rounded-sm bg-opacity-80 hover:bg-opacity-0 hover:text-black hover:border hover:border-black hover:border-opacity-10">
+          Resume
+        </button>
+      </div>
       <div class="flex flex-col gap-2">
         <p class="pl-1 text-xl text-black text-opacity-0 font-black-outline font-exoplane">Skills</p>
         <div class="relative z-10 flex flex-col gap-1 p-2 rounded-sm bg-opacity-5 border-opacity-5 ">
@@ -39,14 +49,11 @@ import OpenInNew from '../../components/icons/OpenInNew.vue'
       
     </div>
     
-    <div class="absolute flex flex-col w-full h-full md:relative">
-      <div class="flex justify-end w-full">
-        <button class="p-1 text-xs transition-colors duration-300 bg-black border border-black border-opacity-0 rounded-sm bg-opacity-80 hover:bg-opacity-0 hover:text-black hover:border hover:border-black hover:border-opacity-10">
-          Github
-        </button>
-      </div>
-    <Three class=""/>
-
+    <div class="absolute flex justify-center w-full h-full lg:relative">
+      <!-- overlay with high z index for mobile users to scroll -->
+      <div id="overlay" class="absolute top-0 left-0 z-10 w-full h-full md:hidden"></div>
+      <Three class="transition-all duration-1000 hover:cursor-move"/>
+      <!-- <ThreeAudioVisual class=""/> -->
     </div>
 
 
