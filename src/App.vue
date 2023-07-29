@@ -8,24 +8,21 @@ import blackWaves from './assets/bg-images/black-and-white-waves.png'
 </script>
 
 <template>
-  <div class="relative flex flex-col items-center h-full min-h-screen pb-12 bg-black bg-main">
-    <div id="content" class="flex w-full h-full max-w-lg gap-4 pt-12 pl-4 pr-4 md:max-w-4xl max-w-768-flex-col">
+  <div class="flex flex-col items-center min-h-screen bg-black bg-main">
+    <div id="content" class="flex w-full max-w-lg min-h-screen gap-8 pt-12 pb-12 pl-4 pr-4 md:max-w-4xl max-w-768-flex-col">
 
-      <section id="section-two" class="flex flex-col h-full max-w-5xl gap-4 md:sticky top-12 md:w-1/2">
-        <div class="">
+      <section id="section-two" class="flex flex-col justify-center h-full max-w-5xl gap-4 md:sticky top-12 md:w-1/2">
+        <div class="h-full">
           <Introduction/>
           <About/>
         </div>
         
       </section>
 
-      <section id="section-one" class="flex flex-col h-full max-w-5xl gap-8 pt-8 overflow-auto">
+      <section id="section-one" class="flex flex-col h-full max-w-5xl gap-8 pb-8 overflow-auto md:w-1/2">
         <Projects/>
-
         <OpenSourceProjects/>
       </section>
-      
-
 
     </div> 
   </div>

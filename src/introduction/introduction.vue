@@ -1,9 +1,5 @@
 <script setup lang="ts">
-const firstName: string[] = ['k', 'e', 'v', 'i', 'n']
-const lastName: string[] = ['k', 'i', 'm']
 
-const web: string[] = ['w', 'e', 'b']
-const developer: string[] = ['d', 'e', 'v','e', 'l', 'o', 'p', 'e', 'r']
 </script>
 
 <template>

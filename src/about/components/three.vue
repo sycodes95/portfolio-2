@@ -19,6 +19,8 @@ const initScene = () => {
 
   scene = new THREE.Scene();
 
+  if(!container) return
+
   const loader = new OBJLoader();
   loader.load('./src/assets/3d-models/male_head.obj' , function(object) {
     
@@ -35,7 +37,7 @@ const initScene = () => {
     scene.add(lightLeft);
     scene.add(lightRight);
     const material = new THREE.MeshPhongMaterial({
-      color: 0x242424, // Base color of the material
+      color: 0x434343, // Base color of the material
       shininess: 55, // Adjust the shininess (higher value for shinier)
       specular: 0xffffff, // Color of the specular highlight
       wireframe: true,
@@ -66,7 +68,7 @@ const initScene = () => {
     500
   );
   camera.position.y = 25
-  camera.position.z = 59;
+  camera.position.z = 50;
 
   // Create the OrbitControls
   controls = new OrbitControls(camera, renderer.domElement);
@@ -141,7 +143,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="relative max-w-56 h-80 md:w-80" ref="canvasContainer">
+  <div class="relative w-72 h-72 max-w-56" ref="canvasContainer">
   </div>
 </template>
 
