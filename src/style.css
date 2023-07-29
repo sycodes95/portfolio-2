@@ -7,8 +7,23 @@
   src: url(./assets/fonts/Exoplane.ttf);
 }
 
+@font-face {
+  font-family: Ocera;
+  src: url(./assets/fonts/OCERA.ttf);
+}
+
+@font-face {
+  font-family: Rockedex;
+  src: url(./assets/fonts/Bender.otf);
+}
+
+@font-face {
+  font-family: Wolves;
+  src: url(./assets/fonts/PureHeart-Regular.ttf);
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Rockedex, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -18,7 +33,10 @@
 
 body {
   margin: 0;
+  z-index: 50;
 }
+
+
 
 .font-green-outline{
   -webkit-text-stroke-width: 1px;
@@ -28,5 +46,44 @@ body {
 .font-white-outline{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.font-black-outline{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.font-exoplane{
+  font-family: Exoplane, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-ocera{
+  font-family: Ocera, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-rockedex{
+  font-family: Rockedex, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-wolves{
+  font-family: Wolves, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 768px){
+  .max-w-768-hidden{
+    display: none;
+  }
+  .max-w-768-flex-col{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px){
+  .max-w-1024-hidden{
+    display: none;
+  }
+  .max-w-1024-flex-col{
+    flex-direction: column;
+  }
 }
 
