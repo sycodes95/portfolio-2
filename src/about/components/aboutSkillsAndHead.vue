@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import silhoutte from '../../assets/images/silhouette.png'
 import { toolsElements } from "../constants";
 import Three from '../components/three.vue'
-
-import OpenInNew from '../../components/icons/OpenInNew.vue'
-import ThreeAudioVisual from './threeAudioVisual.vue';
 </script>
 
 <template>
@@ -22,8 +18,6 @@ import ThreeAudioVisual from './threeAudioVisual.vue';
           </div>
         </div>
       </div>
-
-      
       
     </div>
     

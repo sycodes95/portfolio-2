@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Hammer from '../components/icons/Hammer.vue'
-import RLMechanicImage1 from '../assets/project-images/rlmechanics.png'
 import OpenInNew from '../components/icons/OpenInNew.vue';
 import CodeRacer1 from '../assets/open-source-images/CodeRacer1.png'
 import { onMounted, onUnmounted, ref } from 'vue';
@@ -23,7 +22,6 @@ const projects: Project[] = [
     tools: ['Typescript', 'React', 'Next JS', 'TailwindCSS', 'Postgres'],
     projectURL: "https://code-racer-eight.vercel.app/"
   },
-  
 ]
 
 const isMdOrAbove = ref(window.innerWidth >= 768);
@@ -77,8 +75,6 @@ onUnmounted(() => {
         <img class="w-32 border-4 border-black rounded-sm border-opacity-10 grayscale h-fit max-w-768-hidden" :src="project.images[0]" alt="project-image-1">
 
       </div>
-      
-      
       
     </div>
   </div>

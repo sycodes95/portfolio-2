@@ -3,16 +3,11 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import { SimplifyModifier } from 'three/examples/jsm/modifiers/SimplifyModifier.js';
+import { OrbitControls } from 'three-stdlib/controls/OrbitControls';
+import { OBJLoader } from 'three-stdlib/loaders/OBJLoader';
 
-const canvasContainer = ref(null);
-let scene, camera, renderer, controls, headObject;
-
-const canvas = document.body;
-const raycaster = new THREE.Raycaster();
-
+const canvasContainer = ref<HTMLElement | null>(null);
+let scene: any, camera: any, renderer: any, controls: any, headObject: any;
 
 const initScene = () => {
   const container = canvasContainer.value;
@@ -22,7 +17,7 @@ const initScene = () => {
   if(!container) return
 
   const loader = new OBJLoader();
-  loader.load('./src/assets/3d-models/male_head.obj' , function(object) {
+  loader.load('./src/assets/3d-models/male_head.obj' , function(object: any) {
     
     headObject = object
     // Adjust the position, rotation, and scale of the object if needed
@@ -44,7 +39,7 @@ const initScene = () => {
     });
 
     // Apply the material to all the meshes in the object
-    object.traverse((child) => {
+    object.traverse((child: any) => {
       if (child instanceof THREE.Mesh) {
         child.material = material;
       }
@@ -53,7 +48,7 @@ const initScene = () => {
     scene.add(object);
   });
 
-  renderer = new THREE.WebGLRenderer({ alpha: true , antialias:true});
+  renderer = new THREE.WebGLRenderer({ alpha: true , antialias:true});3
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setClearColor(0x000000, 0); // Transparent background
 
@@ -76,35 +71,9 @@ const initScene = () => {
   controls.enableZoom = false; // Enable zooming
 };
 
-function calculateMouseNDC(event) {
-  const canvasRect = canvas.getBoundingClientRect();
-  const mouseX = event.clientX - canvasRect.left;
-  const mouseY = event.clientY - canvasRect.top;
-  const canvasWidth = canvas.clientWidth;
-  const canvasHeight = canvas.clientHeight;
-  return new THREE.Vector2((mouseX / canvasWidth) * 1.5 - 1, -(mouseY / canvasHeight) * 1.5 + 1);
-}
-
-function checkForIntersections(mouseNDC) {
-  raycaster.setFromCamera(mouseNDC, camera);
-  return raycaster.intersectObject(headObject, true);
-}
-
-const onMouseMove = (event) => {
-  if (!canvasContainer.value) return;
-
-  const mouseNDC = calculateMouseNDC(event);
-  const intersects = checkForIntersections(mouseNDC);
-  console.log(intersects);
-
-  if (intersects.length > 0) {
-    const intersection = intersects[0].point;
-    headObject.lookAt(intersection);
-  }
-};
-
 const updateRendererSize = () => {
   const container = canvasContainer.value;
+  if(!container) return
   const width = container.clientWidth;
   const height = container.clientHeight;
 
@@ -114,6 +83,7 @@ const updateRendererSize = () => {
   // Update camera aspect ratio
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
+  
 };
 
 const animate = () => {
@@ -147,16 +117,3 @@ onBeforeUnmount(() => {
   </div>
 </template>
 
-<style>
-/* Add any styles for the Three.js scene container here if needed */
-</style>
-
-// const geometry = new THREE.BoxGeometry(1, 1, 1);
-
-  // const edges = new THREE.EdgesGeometry(geometry);
-
-  // const material = new THREE.LineBasicMaterial({ color: 0xFFFFFF });
-
-  // blackBox = new THREE.LineSegments(edges, material);
-
-  // scene.add(blackBox)

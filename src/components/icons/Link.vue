@@ -2,19 +2,9 @@
   <svg-icon type="mdi" :path="path"></svg-icon>
 </template>
 
-<script>
+<script setup lang="ts">
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiLinkVariant } from '@mdi/js';
 
-export default {
-  name: "my-component",
-  components: {
-    SvgIcon
-  },
-  data() {
-    return {
-       path: mdiLinkVariant,
-    }
-  }
-}
+const path = mdiLinkVariant;
 </script>

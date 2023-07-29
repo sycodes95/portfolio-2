@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import About from './about/about.vue';
-import Header from './header/header.vue'
 import Introduction from './introduction/introduction.vue'
 import Projects from './projects/projects.vue';
 import OpenSourceProjects from './open-source/openSource.vue'
-import blackWaves from './assets/bg-images/black-and-white-waves.png'
 </script>
 
 <template>

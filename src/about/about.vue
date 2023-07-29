@@ -1,14 +1,11 @@
 
 
 <script setup lang="ts">
-  
-  
   import Description from './components/description.vue'
   import AboutHeader from './components/aboutHeader.vue'
   import AboutLinks from './components/aboutLinks.vue'
   import AboutSkillsAndHead from './components/aboutSkillsAndHead.vue'
   import AboutLanguageAndHobbies from './components/aboutLanguageAndHobbies.vue'
-  import ThreeAudioVisual from './components/threeAudioVisual.vue';
 </script>
 
 <template>
