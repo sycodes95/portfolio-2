@@ -12,6 +12,7 @@
   "dependencies": {
     "@jamescoyle/vue-icon": "^0.1.2",
     "@mdi/js": "^7.2.96",
+    "serve": "^14.2.0",
     "simplex-noise": "^4.0.1",
     "three": "^0.154.0",
     "three-bas": "^3.0.0",
