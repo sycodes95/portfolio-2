@@ -17,7 +17,7 @@ const initScene = () => {
   if(!container) return
 
   const loader = new OBJLoader();
-  loader.load('/src/assets/3d-models/head.obj' , function(object: any) {
+  loader.load('/head.obj' , function(object: any) {
     
     headObject = object
     // Adjust the position, rotation, and scale of the object if needed
