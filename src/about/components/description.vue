@@ -34,7 +34,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-    <div class="text-xs text-black border-black rounded-sm shadow-sm border-opacity-5 bg-opacity-5">
+    <div class="text-xs text-black border-black rounded-sm border-opacity-5 bg-opacity-5">
       <p>It has been 
         <em class="pl-1 pr-1 text-white bg-black bg-opacity-75 rounded-sm w-44">{{ timeDifference.hours }} Hours {{ timeDifference.minutes }} Minutes {{ timeDifference.seconds }} Seconds</em>
         into my coding journey. I initially got into programming seeking to automate and enhance my trading strategies. But web development caught my eye, the fusion of logic and creativity aligned with my visual tendencies. And now, here I am :).

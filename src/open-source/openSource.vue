@@ -49,7 +49,7 @@ onUnmounted(() => {
     </div>
 
     <div id="projects-content" class="flex flex-col h-full gap-4 text-xs text-black border-black rounded-sm border-opacity-10 bg-opacity-5 font-rockedex">
-      <div class="relative flex gap-4 p-2 transition-colors duration-300 bg-black bg-opacity-0 rounded-sm shadow-sm group hover:cursor-pointer md:hover:bg-opacity-5 max-w-768-flex-col" 
+      <div class="relative flex gap-4 p-2 transition-colors duration-300 bg-black bg-opacity-0 rounded-sm group hover:cursor-pointer md:hover:bg-opacity-5 max-w-768-flex-col" 
       v-for="(project, index) in projects" :key="index"
       @click="isMdOrAbove && handleProjectClick(project.projectURL)">
 

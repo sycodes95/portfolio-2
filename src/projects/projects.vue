@@ -3,6 +3,7 @@ import Hammer from '../components/icons/Hammer.vue'
 import RLMechanicPng from '../assets/project-images/rlmechanics.png'
 import JobTrackrPng from '../assets/project-images/jobtrackr.png'
 import EdgeScoutPng from '../assets/project-images/edgescout.png'
+import OnTheBallStats from '../assets/project-images/ontheballstats.png'
 import OpenInNew from '../components/icons/OpenInNew.vue';
 import { onMounted, onUnmounted, ref } from 'vue';
 
@@ -18,11 +19,11 @@ const handleProjectClick = (projectURL: string) => window.open(projectURL)
 
 const projects: Project[] = [
   {
-    name: "Rocket League Mechanics",
-    images: [RLMechanicPng],
-    description: "A rocket league mechanic database where you can browse and learn all of the known mechanics players have come up with since launch of the game! ",
-    tools: ['Typescript', 'React', 'Redux', 'TailwindCSS', 'Node Js', 'Postgres'],
-    projectURL: "https://rlmechanics.com/"
+    name: "On The Ball Stats",
+    images: [OnTheBallStats],
+    description: "Football (soccer) statistics application that displays data for fixtures, leagues, teams and players in a simple way with user friendly UI. ",
+    tools: ['React', 'Redux', 'TailwindCSS'],
+    projectURL: "https://ontheballstats.com/"
   },
   {
     name: "Job Tracker",
@@ -30,6 +31,13 @@ const projects: Project[] = [
     description: "Job application tracker for managing and gaining data driven insights into the users’ job hunting journey. Features sorting, filtering, searching, and data visualizations.",
     tools: ['React', 'TailwindCSS', 'Node Js', 'Postgres'],
     projectURL: "https://jobtrackr.pro/"
+  },
+  {
+    name: "Rocket League Mechanics",
+    images: [RLMechanicPng],
+    description: "A rocket league mechanic database where you can browse and learn all of the known mechanics players have come up with since launch of the game! ",
+    tools: ['Typescript', 'React', 'Redux', 'TailwindCSS', 'Node Js', 'Postgres'],
+    projectURL: "https://rlmechanics.com/"
   },
   {
     name: "Edge Scout",
@@ -66,7 +74,7 @@ onUnmounted(() => {
     </div>
 
     <div id="projects-content" class="flex flex-col h-full gap-4 text-xs text-black border-black rounded-sm border-opacity-10 bg-opacity-5 font-rockedex">
-      <div class="relative flex gap-4 p-2 transition-colors duration-300 bg-black bg-opacity-0 rounded-sm shadow-sm group md:hover:cursor-pointer md:hover:border-opacity-50 md:hover:bg-opacity-5 max-w-768-flex-col" 
+      <div class="relative flex gap-4 p-2 transition-colors duration-300 bg-black bg-opacity-0 rounded-sm group md:hover:cursor-pointer md:hover:border-opacity-50 md:hover:bg-opacity-5 max-w-768-flex-col" 
       v-for="(project, index) in projects" :key="index" @click="isMdOrAbove && handleProjectClick(project.projectURL)">
 
         <img class="w-32 border-4 border-black rounded-sm border-opacity-10 grayscale h-fit max-w-768-hidden" :src="project.images[0]" alt="project-image-1">
