@@ -25,14 +25,9 @@ const initScene = () => {
     object.rotation.set(25, (Math.PI * 180), 0); // Set the rotation (if needed)
     object.scale.set(1.5, 1.5, 1.5); // Set the scale (if needed)
 
-    const lightLeft = new THREE.PointLight(0xffffff, 1); // White light with intensity 1
-    lightLeft.position.set(500, 50, 0); // Position the light
-    const lightRight = new THREE.PointLight(0xffffff, 1); // White light with intensity 1
-    lightRight.position.set(0, 50, 60); // Position the light
-    scene.add(lightLeft);
-    scene.add(lightRight);
+    
     const material = new THREE.MeshPhongMaterial({
-      color: 0x434343, // Base color of the material
+      color: 0xFFFFFF, // Base color of the material
       shininess: 55, // Adjust the shininess (higher value for shinier)
       specular: 0xffffff, // Color of the specular highlight
       wireframe: true,

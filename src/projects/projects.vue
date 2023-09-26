@@ -4,6 +4,7 @@ import RLMechanicPng from '../assets/project-images/rlmechanics.png'
 import JobTrackrPng from '../assets/project-images/jobtrackr.png'
 import EdgeScoutPng from '../assets/project-images/edgescout.png'
 import OnTheBallStats from '../assets/project-images/ontheballstats.png'
+import PolyglotPal from '../assets/project-images/polyglotpal.png'
 import OpenInNew from '../components/icons/OpenInNew.vue';
 import { onMounted, onUnmounted, ref } from 'vue';
 
@@ -18,6 +19,14 @@ type Project = {
 const handleProjectClick = (projectURL: string) => window.open(projectURL)
 
 const projects: Project[] = [
+  {
+    name: "Polyglot Pal (WIP)",
+    images: [PolyglotPal],
+    description: "Polyglot Pal is designed for language enthusiasts keen to hone their speaking skills in specific languages, all from home, using advanced AI technology.",
+    tools: ['React', 'TailwindCSS', 'Convex (SaaS Backend)'],
+    projectURL: "https://polyglotpal.up.railway.app/"
+  }
+  ,
   {
     name: "On The Ball Stats",
     images: [OnTheBallStats],
