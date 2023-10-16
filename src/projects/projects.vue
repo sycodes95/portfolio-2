@@ -20,7 +20,7 @@ const handleProjectClick = (projectURL: string) => window.open(projectURL)
 
 const projects: Project[] = [
   {
-    name: "Polyglot Pal (WIP)",
+    name: "Polyglot Pal",
     images: [PolyglotPal],
     description: "Polyglot Pal is designed for language enthusiasts keen to hone their speaking skills in specific languages, all from home, using advanced AI technology.",
     tools: ['React', 'TailwindCSS', 'Convex (SaaS Backend)'],
@@ -86,9 +86,9 @@ onUnmounted(() => {
       <div class="relative flex gap-4 p-2 transition-colors duration-300 bg-black bg-opacity-0 rounded-sm group md:hover:cursor-pointer md:hover:border-opacity-50 md:hover:bg-opacity-5 max-w-768-flex-col" 
       v-for="(project, index) in projects" :key="index" @click="isMdOrAbove && handleProjectClick(project.projectURL)">
 
-        <img class="w-32 border-4 border-black rounded-sm border-opacity-10 grayscale h-fit max-w-768-hidden" :src="project.images[0]" alt="project-image-1">
+        <img class="w-32 border-4 border-black rounded-sm h-fit border-opacity-10 grayscale max-w-768-hidden" :src="project.images[0]" alt="project-image-1">
 
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2 ">
           <p class="flex items-center gap-2 text-lg font-bold transition-colors duration-300 hover:cursor-pointer md:group-hover:text-white hover:text-white text-shadow-black"
           @click="!isMdOrAbove && handleProjectClick(project.projectURL)">
           {{ project.name }}
